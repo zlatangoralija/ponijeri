@@ -1,98 +1,319 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+@section('content')
+    <!--/ Intro Single star /-->
+    <section class="intro-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-8">
+                    <div class="title-single-box">
+                        <h1 class="title-a">Our Amazing Properties</h1>
+                    </div>
                 </div>
-            @endif
+                {{-- select forma --}}
+                {{--<div class="col-md-12 col-lg-4">--}}
+                    {{--<div class="grid-option">--}}
+                        {{--<form>--}}
+                            {{--<select class="custom-select">--}}
+                                {{--<option selected>All</option>--}}
+                                {{--<option value="1">New to Old</option>--}}
+                                {{--<option value="2">For Rent</option>--}}
+                                {{--<option value="3">For Sale</option>--}}
+                            {{--</select>--}}
+                        {{--</form>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            </div>
+        </div>
+    </section>
+    <!--/ Intro Single End /-->
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel - works
+    <!--/ Property Grid Star /-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card-box-a card-shadow">
+                        <div class="img-box-a">
+                            <img src="{{asset('frontend_assets/img/property-1.jpg')}}" alt="" class="img-a img-fluid">
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-overlay-a-content">
+                                <div class="card-header-a">
+                                    <h2 class="card-title-a">
+                                        <a href="#">204 Mount
+                                            <br /> Olive Road Two</a>
+                                    </h2>
+                                </div>
+                                <div class="card-body-a">
+                                    <div class="price-box d-flex">
+                                        <span class="price-a">rent | $ 12.000</span>
+                                    </div>
+                                    <a href="property-single.html" class="link-a">Click here to view
+                                        <span class="ion-ios-arrow-forward"></span>
+                                    </a>
+                                </div>
+                                <div class="card-footer-a">
+                                    <ul class="card-info d-flex justify-content-around">
+                                        <li>
+                                            <h4 class="card-info-title">Area</h4>
+                                            <span>340m
+                        <sup>2</sup>
+                      </span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Beds</h4>
+                                            <span>2</span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Baths</h4>
+                                            <span>4</span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Garages</h4>
+                                            <span>1</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="col-md-4">
+                    <div class="card-box-a card-shadow">
+                        <div class="img-box-a">
+                            <img src="{{asset('frontend_assets/img/property-3.jpg')}}" alt="" class="img-a img-fluid">
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-overlay-a-content">
+                                <div class="card-header-a">
+                                    <h2 class="card-title-a">
+                                        <a href="#">204 Mount
+                                            <br /> Olive Road Two</a>
+                                    </h2>
+                                </div>
+                                <div class="card-body-a">
+                                    <div class="price-box d-flex">
+                                        <span class="price-a">rent | $ 12.000</span>
+                                    </div>
+                                    <a href="property-single.html" class="link-a">Click here to view
+                                        <span class="ion-ios-arrow-forward"></span>
+                                    </a>
+                                </div>
+                                <div class="card-footer-a">
+                                    <ul class="card-info d-flex justify-content-around">
+                                        <li>
+                                            <h4 class="card-info-title">Area</h4>
+                                            <span>340m
+                        <sup>2</sup>
+                      </span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Beds</h4>
+                                            <span>2</span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Baths</h4>
+                                            <span>4</span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Garages</h4>
+                                            <span>1</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-box-a card-shadow">
+                        <div class="img-box-a">
+                            <img src="{{asset('frontend_assets/img/property-6.jpg')}}" alt="" class="img-a img-fluid">
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-overlay-a-content">
+                                <div class="card-header-a">
+                                    <h2 class="card-title-a">
+                                        <a href="#">204 Mount
+                                            <br /> Olive Road Two</a>
+                                    </h2>
+                                </div>
+                                <div class="card-body-a">
+                                    <div class="price-box d-flex">
+                                        <span class="price-a">rent | $ 12.000</span>
+                                    </div>
+                                    <a href="property-single.html" class="link-a">Click here to view
+                                        <span class="ion-ios-arrow-forward"></span>
+                                    </a>
+                                </div>
+                                <div class="card-footer-a">
+                                    <ul class="card-info d-flex justify-content-around">
+                                        <li>
+                                            <h4 class="card-info-title">Area</h4>
+                                            <span>340m
+                        <sup>2</sup>
+                      </span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Beds</h4>
+                                            <span>2</span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Baths</h4>
+                                            <span>4</span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Garages</h4>
+                                            <span>1</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-box-a card-shadow">
+                        <div class="img-box-a">
+                            <img src="{{asset('frontend_assets/img/property-7.jpg')}}" alt="" class="img-a img-fluid">
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-overlay-a-content">
+                                <div class="card-header-a">
+                                    <h2 class="card-title-a">
+                                        <a href="#">204 Mount
+                                            <br /> Olive Road Two</a>
+                                    </h2>
+                                </div>
+                                <div class="card-body-a">
+                                    <div class="price-box d-flex">
+                                        <span class="price-a">rent | $ 12.000</span>
+                                    </div>
+                                    <a href="property-single.html" class="link-a">Click here to view
+                                        <span class="ion-ios-arrow-forward"></span>
+                                    </a>
+                                </div>
+                                <div class="card-footer-a">
+                                    <ul class="card-info d-flex justify-content-around">
+                                        <li>
+                                            <h4 class="card-info-title">Area</h4>
+                                            <span>340m
+                        <sup>2</sup>
+                      </span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Beds</h4>
+                                            <span>2</span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Baths</h4>
+                                            <span>4</span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Garages</h4>
+                                            <span>1</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-box-a card-shadow">
+                        <div class="img-box-a">
+                            <img src="{{asset('frontend_assets/img/property-8.jpg')}}" alt="" class="img-a img-fluid">
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-overlay-a-content">
+                                <div class="card-header-a">
+                                    <h2 class="card-title-a">
+                                        <a href="#">204 Mount
+                                            <br /> Olive Road Two</a>
+                                    </h2>
+                                </div>
+                                <div class="card-body-a">
+                                    <div class="price-box d-flex">
+                                        <span class="price-a">rent | $ 12.000</span>
+                                    </div>
+                                    <a href="property-single.html" class="link-a">Click here to view
+                                        <span class="ion-ios-arrow-forward"></span>
+                                    </a>
+                                </div>
+                                <div class="card-footer-a">
+                                    <ul class="card-info d-flex justify-content-around">
+                                        <li>
+                                            <h4 class="card-info-title">Area</h4>
+                                            <span>340m
+                        <sup>2</sup>
+                      </span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Beds</h4>
+                                            <span>2</span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Baths</h4>
+                                            <span>4</span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Garages</h4>
+                                            <span>1</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-box-a card-shadow">
+                        <div class="img-box-a">
+                            <img src="{{asset('frontend_assets/img/property-10.jpg')}}" alt="" class="img-a img-fluid">
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-overlay-a-content">
+                                <div class="card-header-a">
+                                    <h2 class="card-title-a">
+                                        <a href="#">204 Mount
+                                            <br /> Olive Road Two</a>
+                                    </h2>
+                                </div>
+                                <div class="card-body-a">
+                                    <div class="price-box d-flex">
+                                        <span class="price-a">rent | $ 12.000</span>
+                                    </div>
+                                    <a href="property-single.html" class="link-a">Click here to view
+                                        <span class="ion-ios-arrow-forward"></span>
+                                    </a>
+                                </div>
+                                <div class="card-footer-a">
+                                    <ul class="card-info d-flex justify-content-around">
+                                        <li>
+                                            <h4 class="card-info-title">Area</h4>
+                                            <span>340m
+                        <sup>2</sup>
+                      </span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Beds</h4>
+                                            <span>2</span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Baths</h4>
+                                            <span>4</span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Garages</h4>
+                                            <span>1</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+
+    @stop
