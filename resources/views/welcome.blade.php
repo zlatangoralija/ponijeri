@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.indexApp')
 
 @section('content')
     <!--/ Intro Single star /-->
