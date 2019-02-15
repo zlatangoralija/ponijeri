@@ -19,3 +19,7 @@ Auth::routes();
 
 Route::get('/admin', 'HomeController@index')->name('admin');
 
+Route::resource('admin/accommodation', 'AccommodationController');
+Route::resource('admin/accommodation/type', 'AccommodationTypeController');
+Route::resource('admin/accommodation/contacts', 'AccommodationContactController');
+
