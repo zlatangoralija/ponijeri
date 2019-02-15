@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Accommodation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class AccommodationController extends Controller
 {
@@ -13,7 +15,8 @@ class AccommodationController extends Controller
      */
     public function index()
     {
-        return view ('backend.accommodation.index');
+        $accommodations = Accommodation::all();
+        return view ('backend.accommodation.index', compact('accommodations'));
     }
 
     /**
